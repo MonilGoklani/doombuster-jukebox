@@ -1,0 +1,500 @@
+/* * {
+  margin: 0;
+  padding: 0;
+}  */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+nav a {
+  display: inline-block;
+  margin: 1em;
+}
+
+#main {
+  background-image: url("background_3.jpg");
+  background-size: cover;
+  padding-top: 56px;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: repeat;
+}
+
+#appname {
+  font-size: 3.3rem;
+  font-family: "Erosion";
+  opacity: 90%;
+  -webkit-text-stroke: 0.3px black;
+  margin: 0;
+}
+
+#appname-nav {
+  display:flex;
+  align-items:center;
+  justify-content: left;
+}
+
+#icon {
+  font-family: "DJ";
+  font-size: 6rem;
+  opacity: 80%;
+  margin: 0;
+  /* color:#d9f0ff; */
+  color: black;
+  -webkit-text-stroke: 1px white;
+}
+
+
+
+#navbar *{
+  font-size: 0.7rem;
+}
+
+#icon-nav {
+  font-family: "DJ";
+  font-size: 2rem;
+  opacity: 80%;
+  color: black;
+  -webkit-text-stroke: 1px white;
+}
+
+#select-queue{
+  margin-right: 1rem;
+}
+
+.navtitles {
+  font-family: "Plane Crash";
+  font-size: 1em;
+  color: white;
+  opacity: 85%;
+  text-shadow: 6px 2px black;
+}
+
+#form {
+  width: 100vw;
+}
+
+form div {
+  margin: 1em;
+  display: inline-block;
+}
+
+/* .MuiTypography-body1 {
+  font-size: 0.8rem !important;
+} */
+
+button {
+  cursor: pointer;
+}
+
+#songList {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  justify-content: center;
+}
+
+.choice-title {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.5em;
+  text-align: left;
+  font-family: "Bohemian";
+  font-size: 0.9rem;
+}
+
+.background-image {
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.MuiInputBase-input {
+  color: white !important;
+}
+
+.MuiButton-contained {
+  background-color: rgb(0, 255, 255) !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.MuiFormLabel-root {
+  color: white !important;
+}
+
+
+
+.navtitle-container {
+  display: flex;
+  justify-content: center;
+}
+
+#playerBar {
+  display: flex;
+  justify-content: center;
+}
+
+#playerBarItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#player {
+  /* max-width:390px;
+  height:230px; */
+  background-color: black;
+  color: white;
+}
+
+#skip-button {
+  font-size: 0.5rem;
+  padding: 3px;
+}
+
+#veto-button {
+  font-size: 0.5rem;
+  padding: 3px;
+}
+
+#topThree {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 100%;
+  max-width: 95vw;
+  height: 7em;
+  margin-top: 0.5rem;
+}
+
+#topThree h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+  font-family: "Plane Crash";
+  margin: 0.5em 0 0 0;
+  opacity: 85%;
+}
+
+#topThree img {
+  height: 1.5em;
+  width: 2em;
+}
+
+#largeThumbnail {
+  width: 100%;
+  height: 230px;
+}
+
+.currentSongName {
+  margin: 0;
+  font-family: "Passion One";
+  font-size: 1rem;
+  text-align-last: center;
+}
+
+#placeholder {
+  width: 98%;
+  height: 230px;
+}
+
+#options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#addPlaylist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0 0.3rem 0;
+  width: 100vw;
+  background-color: black;
+}
+
+.MuiCard-root {
+  font-size: 10px;
+  background-color: #050e4a;
+  color: white;
+  margin: 3px;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  /* padding:1px; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#topThreeItem {
+  box-shadow: 0 4px 12px rgb(52 235 229 / 50%);
+  display: flex;
+  align-items: center;
+}
+
+#select-song-item {
+  max-width: 99vw;
+  box-shadow: 0 3px 8px rgb(52 235 229 / 50%);
+  margin-bottom: 0.3em;
+}
+
+#select-song-item img {
+  height: 50px;
+  width: 20%;
+}
+
+#select-song-item button {
+  max-width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-width: 0px;
+}
+
+#queue {
+  width: 100vw;
+  background-color: #081522;
+  color: white;
+  font-family: "Plane Crash";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+#queue h1 {
+  opacity: 85%;
+  font-size: 1em;
+  margin: 0 0 0.3em 0;
+}
+
+#queueItem {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5em 0 0.5em;
+  background-color: black;
+  margin-bottom: 0.2em;
+  color: white;
+  width: 99%;
+  box-shadow: 0 3px 8px rgb(52 235 229 / 50%);
+  font-family: "Passion One";
+  font-size: 1.2em;
+  height: 2.5em;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.queue-liner {
+  display: flex;
+  width: 80%;
+  max-height: 100%;
+  /* overflow: hidden; */
+}
+
+.queue-song{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+#options-main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #02031c;
+}
+
+#options-main h3 {
+  color: white;
+  font-family: "Bohemian";
+  font-size: small;
+  margin: 0;
+}
+
+#custom-song {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem 0 1rem;
+}
+
+#select-playlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem 0 1rem;
+}
+
+#addPlaylist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 1rem 0;
+}
+
+/* #search{
+    margin:0 1rem 0 1rem;
+  } */
+
+/* #searchbar{
+    width: 20rem;
+  } */
+
+/* #custom-song-input{
+    width: 20rem;
+  } */
+
+#songList {
+  background-color: black;
+  width: 100vw;
+}
+
+#trivia-container{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  padding-bottom: 2rem;
+}
+
+#trivia-container *{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'JMH';
+}
+
+#trivia-instructions {
+  font-size: 0.85rem;
+  font-family: "Plane Crash";
+  color: #34ebe5;
+  background-color: black;
+  padding: 0 2rem 0 2rem;
+  margin-top: 2rem;
+}
+
+.activeTrivia {
+  color: white;
+  width: 100vw;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.activeTrivia h2{
+  font-size: 0.7rem;
+}
+
+#answerAndScore {
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+}
+
+#answers-options {
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+}
+
+#answers-options *{
+  font-size: 1rem;
+}
+
+#score-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #34ebe5;
+  font-size: 1rem;
+}
+
+#score-board {
+  font-size: 1rem;
+}
+
+
+@keyframes floatText {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@font-face {
+  font-family: Vintage Warehouse;
+  src: url("./fonts/Vintage\ Warehouse.ttf");
+}
+@font-face {
+  font-family: Tatoo Shop;
+  src: url("./fonts/Tattoo\ Shop.otf");
+}
+@font-face {
+  font-family: Chernobyl;
+  src: url("./fonts/Chernobyl.otf");
+}
+@font-face {
+  font-family: Propaganda;
+  src: url("./fonts/PROPAGAN.ttf");
+}
+@font-face {
+  font-family: Plane Crash;
+  src: url("./fonts/Plane\ Crash.ttf");
+}
+@font-face {
+  font-family: Eight Bit;
+  src: url("./fonts/8-BIT\ WONDER.TTF");
+}
+@font-face {
+  font-family: Gazelle;
+  src: url("./fonts/Gazelle.ttf");
+}
+@font-face {
+  font-family: Erosion;
+  src: url("./fonts/Examples\ of\ erosion.ttf");
+}
+@font-face {
+  font-family: DJ;
+  src: url("./fonts/DJ\ Icons.ttf");
+}
+@font-face {
+  font-family: Bohemian;
+  src: url("./fonts/Bohemian\ Typewriter.ttf");
+}
+@font-face {
+  font-family: JMH;
+  src: url("./fonts/JMH\ Typewriter.ttf");
+}
