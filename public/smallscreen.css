@@ -36,15 +36,15 @@ nav a {
 
 #appname {
   font-size: 3.3rem;
-  font-family: "Erosion";
+  font-family: "UnifrakturCook";
   opacity: 90%;
   -webkit-text-stroke: 0.3px black;
   margin: 0;
 }
 
 #appname-nav {
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   justify-content: left;
 }
 
@@ -58,9 +58,7 @@ nav a {
   -webkit-text-stroke: 1px white;
 }
 
-
-
-#navbar *{
+#navbar * {
   font-size: 0.7rem;
 }
 
@@ -72,7 +70,7 @@ nav a {
   -webkit-text-stroke: 1px white;
 }
 
-#select-queue{
+#select-queue {
   margin-right: 1rem;
 }
 
@@ -141,8 +139,6 @@ button {
 .MuiFormLabel-root {
   color: white !important;
 }
-
-
 
 .navtitle-container {
   display: flex;
@@ -318,7 +314,7 @@ button {
   /* overflow: hidden; */
 }
 
-.queue-song{
+.queue-song {
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -385,18 +381,18 @@ button {
   width: 100vw;
 }
 
-#trivia-container{
+#trivia-container {
   width: 100vw;
   height: 100vh;
   background-color: black;
   padding-bottom: 2rem;
 }
 
-#trivia-container *{
+#trivia-container * {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'JMH';
+  font-family: "JMH";
 }
 
 #trivia-instructions {
@@ -414,14 +410,14 @@ button {
   padding: 0 1.5rem 0 1.5rem;
 }
 
-.activeTrivia h2{
+.activeTrivia h2 {
   font-size: 0.7rem;
 }
 
 #answerAndScore {
   flex-direction: row;
   justify-content: space-between;
-  width:100%;
+  width: 100%;
 }
 
 #answers-options {
@@ -430,7 +426,7 @@ button {
   width: 100%;
 }
 
-#answers-options *{
+#answers-options * {
   font-size: 1rem;
 }
 
@@ -446,7 +442,6 @@ button {
 #score-board {
   font-size: 1rem;
 }
-
 
 @keyframes floatText {
   to {

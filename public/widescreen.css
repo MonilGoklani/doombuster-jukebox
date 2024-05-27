@@ -36,15 +36,15 @@ nav a {
 }
 
 #appname {
-  font-size: 10rem;
-  font-family: "Erosion";
+  font-size: 6rem;
+  font-family: "UnifrakturCook";
   opacity: 90%;
   -webkit-text-stroke: 0.1px black;
 }
 
 #icon {
   font-family: "DJ";
-  font-size: 10rem;
+  font-size: 6rem;
   opacity: 80%;
   color: black;
   -webkit-text-stroke: 1px white;
@@ -326,18 +326,18 @@ button {
   background-color: black;
 }
 
-#trivia-container{
+#trivia-container {
   width: 100vw;
   height: 100vh;
   background-color: black;
   padding-bottom: 2rem;
 }
 
-#trivia-container *{
+#trivia-container * {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'JMH';
+  font-family: "JMH";
 }
 
 #trivia-instructions {
@@ -358,7 +358,7 @@ button {
 #answerAndScore {
   flex-direction: row;
   justify-content: space-around;
-  width:100%;
+  width: 100%;
 }
 
 #answers-options {

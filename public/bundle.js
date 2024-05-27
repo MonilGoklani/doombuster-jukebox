@@ -20729,6 +20729,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 const theme = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__.default)({
   palette: {
     primary: {
@@ -20743,31 +20745,36 @@ const theme = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__.default)(
 
 const styles = theme => ({
   main: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    height: '60vh',
-    color: 'white'
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    height: "60vh",
+    color: "white"
   },
   form: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
   },
   radioButton: {
-    display: 'flex',
-    justifyContent: 'center',
-    color: 'white'
+    display: "flex",
+    justifyContent: "center",
+    color: "white"
   },
   button: {
-    margin: '1rem',
-    width: '100px',
-    backgroundColor: '#34ebe5',
-    color: 'black'
+    margin: "1rem",
+    width: "100px",
+    backgroundColor: "#34ebe5",
+    color: "black"
   },
   root: {
-    color: 'white'
+    color: "white"
+  },
+  textfield: {
+    border: "1px dashed #34ebe5",
+    padding: "5px",
+    borderRadius: "5px"
   }
 });
 /**
@@ -20779,10 +20786,10 @@ class LandingPage extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
   constructor(props) {
     super();
     this.state = {
-      roomOption: '',
+      roomOption: "",
       roomOptionSelected: 0,
       roomCode: 0,
-      formName: 'login',
+      formName: "login",
       roomAlreadyExists: 0,
       roomDoesNotExist: 0
     };
@@ -20827,7 +20834,7 @@ class LandingPage extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       });
       const res = (await axios__WEBPACK_IMPORTED_MODULE_3___default().get(`/api/room/${roomCode}`)).data;
 
-      if (this.state.roomOption === 'newRoom' && res.roomId) {
+      if (this.state.roomOption === "newRoom" && res.roomId) {
         this.setState({
           roomOptionSelected: 0
         });
@@ -20839,7 +20846,7 @@ class LandingPage extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         });
       }
     } catch (ex) {
-      if (this.state.roomOption === 'enterRoom') {
+      if (this.state.roomOption === "enterRoom") {
         this.setState({
           roomDoesNotExist: 1
         });
@@ -20875,7 +20882,7 @@ class LandingPage extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
     } = this.state;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: classes.main
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       id: "appname"
     }, "Doombuster"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
       id: "icon"
@@ -20892,30 +20899,39 @@ class LandingPage extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       defaultValue: roomOption
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_9__.default, {
       value: "enterRoom",
-      control: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, null),
+      control: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, {
+        style: {
+          color: "#f50057"
+        }
+      }),
       label: "Enter Existing Room"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_9__.default, {
       value: "newRoom",
-      control: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, null),
+      control: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, {
+        style: {
+          color: "#f50057"
+        }
+      }),
       label: "Create New Room"
-    })))), roomOption ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_11__.default, {
-      className: classes.textfield,
+    })))), roomOption ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: classes.textfield
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_11__.default, {
       style: {
-        textAlign: 'center'
+        textAlign: "center"
       },
-      value: roomCode !== 0 ? roomCode : '',
+      value: roomCode !== 0 ? roomCode : "",
       label: "Enter Room Code",
       onChange: ev => handleChange(ev)
-    }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_12__.default, {
+    })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_12__.default, {
       className: classes.button,
       color: "primary",
       variant: "contained",
       onClick: () => submitRoomOption(roomCode)
     }, "SUBMIT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_13__.default, {
       className: classes.root
-    }, roomAlreadyExists ? 'Room Code Already Exists, Please Enter A Different Code' : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_13__.default, {
+    }, roomAlreadyExists ? "Room Code Already Exists, Please Enter A Different Code" : ""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_13__.default, {
       className: classes.root
-    }, roomDoesNotExist ? 'Invalid Room Code' : '')) : null, roomOptionSelected ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
+    }, roomDoesNotExist ? "Invalid Room Code" : "")) : null, roomOptionSelected ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
       onSubmit: ev => handleSubmit(ev, roomOption, roomCode, formName)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: classes.form
@@ -20933,10 +20949,10 @@ class LandingPage extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       variant: "contained",
       type: "submit",
       value: formName
-    }, formName === 'signup' ? 'Sign Up' : 'Login'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, formName === 'signup' ? 'Already have an account?' : 'Dont have an account?', " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-      value: formName === 'login' ? 'signup' : 'login',
+    }, formName === "signup" ? "Sign Up" : "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, formName === "signup" ? "Already have an account?" : "Dont have an account?", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      value: formName === "login" ? "signup" : "login",
       onClick: selectFormName
-    }, formName === 'signup' ? 'Login' : 'Register')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_13__.default, {
+    }, formName === "signup" ? "Login" : "Register")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_13__.default, {
       className: classes.root
     }, error && error.response && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, " ", error.response.data, " ")))) : null);
   }
@@ -20959,7 +20975,7 @@ const mapDispatch = dispatch => {
     },
 
     async findRoom(roomCode) {
-      console.log('roomCode', roomCode);
+      console.log("roomCode", roomCode);
       const res = await axios__WEBPACK_IMPORTED_MODULE_3___default().get(`/api/room/${roomCode}`);
     }
 
